@@ -1,12 +1,12 @@
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
-public class SwitchToAlert {
+public class DragAndDrop {
 	private DriverUtilities driverUtilities;
 
     private WebDriver driver;
@@ -20,14 +20,16 @@ public class SwitchToAlert {
     @Test
     public void test1(){
 
-        driver.get("https://formy-project.herokuapp.com/switch-window");
+        driver.get("https://formy-project.herokuapp.com/dragdrop");
         
-        WebElement alertButton = driver.findElement(By.id("alert-button"));
-        alertButton.click();
+        WebElement image = driver.findElement(By.id("image"));
         
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+        WebElement box = driver.findElement(By.id("box"));
+        
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(image, box).build().perform();
 
-        //driver.quit();
+        driver.quit();
     }
 }
+
