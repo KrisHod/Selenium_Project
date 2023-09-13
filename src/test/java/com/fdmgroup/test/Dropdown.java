@@ -30,7 +30,7 @@ public class Dropdown {
         //driver.findElement(By.id("dropdownMenuButton")).click(); //By id
         //driver.findElement(By.xpath("//*[@id='dropdownMenuButton']")).click(); // By xpath
         //driver.findElement(By.xpath("//*[contains(@id,'dropdown')]")).click(); // contains(@attributeName, "attributeValue")
-        driver.findElement(By.xpath("//*[starts-with(@id,'drop')]")).click(); // starts-with(@attributeName, "startingValue")
+        driver.findElement(By.xpath("//*[starts-with(@id,'drop')]")).click(); // starts-with(@attributeName, "startingValueOfAttribute")
         
         
         driver.findElement(By.id("autocomplete")).click();
