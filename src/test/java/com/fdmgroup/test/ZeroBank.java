@@ -64,6 +64,7 @@ public class ZeroBank {
 		
 		selectedPayeeDropDown.selectByIndex(2);
 		selectedPayeeDropDown.selectByValue("sprint");
+		selectedPayeeDropDown.selectByVisibleText("Wells Fargo");
 		
 		WebElement usernameLabel = driver.findElement(By.xpath("//*[@id='settingsBox']/ul/li[3]/a"));
 		String actualUsername = usernameLabel.getText();
